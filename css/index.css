@@ -1,3 +1,15 @@
+/* Custom fonts */
+.roboto-mono-400 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.default h1, .default header, .default p {
+	font-family: "Roboto Mono", monospace;
+}
+
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
