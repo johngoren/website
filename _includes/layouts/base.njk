@@ -12,9 +12,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		- <meta name="generator" content="{{ eleventy.generator }}">
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
 
 		{#-
 		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
@@ -45,7 +44,7 @@
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 	</head>
-	<body class="default">
+	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
@@ -56,10 +55,7 @@
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item">
-						<a href="{{ entry.url }}"
-						{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-					</li>
+					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 				</ul>
 			</nav>
