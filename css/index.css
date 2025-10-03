@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-.default h1, .default header, .default p {
+.defaultTheme h1, .defaultTheme header, .defaultTheme p {
 	font-family: "Roboto Mono", monospace;
 }
 
